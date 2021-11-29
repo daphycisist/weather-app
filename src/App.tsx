@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import WeatherInfoPage from './components/WeatherInfoPage';
 
 function App() {
   return (
     <div className="App">
-     
+      <WeatherInfoPage />
     </div>
   );
 }
