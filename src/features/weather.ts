@@ -4,15 +4,14 @@ import { fetchWeatherInfo } from './../redux/actions/fetchWeatherInfo';
 
 const initialState: IWeatherState = {
   data: [],
-  loading: 'idle',
+  loading: 'pending',
   error: '',
 };
 
 export const weatherSlice = createSlice({
   name: 'fetchWeatherData',
   initialState,
-  reducers: { 
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchWeatherInfo.pending, (state, action) => {
       state.loading = 'pending';
@@ -22,7 +21,7 @@ export const weatherSlice = createSlice({
       fetchWeatherInfo.fulfilled,
       (state, action: PayloadAction<any>) => {
         state.loading = 'succeeded';
-        state.data = action?.payload?.data;
+        state.data = action?.payload;
       }
     );
 
@@ -36,7 +35,5 @@ export const weatherSlice = createSlice({
     );
   },
 });
-
-// export const {  } = weatherSlice.actions;
 
 export default weatherSlice.reducer;
