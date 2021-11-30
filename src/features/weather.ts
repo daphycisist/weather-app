@@ -1,9 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IWeatherState } from '../Interfaces';
 import { fetchWeatherInfo } from './../redux/actions/fetchWeatherInfo';
 
-const initialState: IWeatherState = {
-  data: [],
+const initialState = {
+  data: {},
   loading: 'pending',
   error: '',
 };
@@ -29,7 +28,7 @@ export const weatherSlice = createSlice({
       fetchWeatherInfo.rejected,
       (state, action: PayloadAction<any>) => {
         state.loading = 'failed';
-        state.data = [];
+        state.data = initialState.data;
         state.error = action?.payload;
       }
     );

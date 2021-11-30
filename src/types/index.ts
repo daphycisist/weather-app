@@ -41,10 +41,28 @@ export interface IWeatherData {
   id: number;
   name: string;
   cod: number;
+  city: {
+    id: number;
+    name: string;
+    coord: {
+      lat: number;
+      lon: number;
+    };
+    country: string;
+    population: number;
+    timezone: number;
+    sunrise: number;
+    sunset: number;
+  };
 }
 
 export interface IWeatherState {
-  data: IWeatherData[];
+  data: IWeatherData;
   loading: 'idle' | 'pending' | 'succeeded' | 'failed';
   error: string;
+}
+
+export enum TempUnits {
+  Fahrenheit = 'imperial',
+  Celsius = 'metric'
 }

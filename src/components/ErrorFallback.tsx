@@ -1,6 +1,6 @@
 import { Button } from '@chakra-ui/button';
 import { Box, Grid } from '@chakra-ui/layout';
-import React from 'react';
+import React, { memo } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 
@@ -34,4 +34,4 @@ const ErrorFallback: React.FC<IError> = ({ error, resetErrorBoundary }) => {
     </Grid>
   );
 };
-export default ErrorFallback;
+export default memo(ErrorFallback);

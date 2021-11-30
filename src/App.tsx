@@ -1,8 +1,8 @@
-import { Container } from '@chakra-ui/layout';
+import { Box } from '@chakra-ui/layout';
 import React from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { useDispatch } from 'react-redux';
-import './App.css';
+// import './App.css';
 import ErrorFallback from './components/ErrorFallback';
 import WeatherInfoPage from './components/WeatherInfoPage';
 import { fetchWeatherInfo } from './redux/actions/fetchWeatherInfo';
@@ -10,11 +10,11 @@ import { fetchWeatherInfo } from './redux/actions/fetchWeatherInfo';
 function App() {
   const dispatch = useDispatch();
   const resetErrorBoundary = () => {
-    dispatch(fetchWeatherInfo('Lagnos'));
+    dispatch(fetchWeatherInfo('Lagos'));
   };
 
   return (
-    <Container className="App">
+    <Box className="App" padding="0">
       <ErrorBoundary
         onReset={() => {
           resetErrorBoundary();
@@ -23,7 +23,7 @@ function App() {
       >
         <WeatherInfoPage />
       </ErrorBoundary>
-    </Container>
+    </Box>
   );
 }
 
