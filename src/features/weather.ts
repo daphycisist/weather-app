@@ -1,24 +1,32 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { IWeather, IWeatherData } from '../types';
 import { fetchWeatherInfo } from './../redux/actions/fetchWeatherInfo';
+import { TempUnits } from './../types/index';
 
 const initialState = {
   data: {},
+  unit: TempUnits.Celsius,
   loading: 'pending',
   error: '',
-};
+} as IWeather;
 
 export const weatherSlice = createSlice({
-  name: 'fetchWeatherData',
+  name: 'Weather',
   initialState,
-  reducers: {},
+  reducers: {
+    setTemperatureUnit: (state, action) => {
+      state.unit = action.payload;
+    },
+  },
   extraReducers: (builder) => {
-    builder.addCase(fetchWeatherInfo.pending, (state, action) => {
+    builder.addCase(fetchWeatherInfo.pending, (state) => {
       state.loading = 'pending';
     });
 
     builder.addCase(
       fetchWeatherInfo.fulfilled,
-      (state, action: PayloadAction<any>) => {
+      (state, action: PayloadAction<IWeatherData>) => {
+        console.log('Payload', action.payload);
         state.loading = 'succeeded';
         state.data = action?.payload;
       }
@@ -35,4 +43,5 @@ export const weatherSlice = createSlice({
   },
 });
 
+export const { setTemperatureUnit } = weatherSlice.actions;
 export default weatherSlice.reducer;

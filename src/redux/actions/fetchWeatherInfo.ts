@@ -1,12 +1,17 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { AxiosError } from 'axios';
 import { fetchWeatherData } from '../../api/api';
+import { IQueryPayload } from './../../types/index';
 
 export const fetchWeatherInfo = createAsyncThunk(
   'fetchWeatherData',
-  async (payload: string, { rejectWithValue, getState, dispatch }) => {
+  async (
+    { city, unit }: IQueryPayload,
+    { rejectWithValue }
+  ) => {
     try {
-      return await fetchWeatherData(payload);
+      const data = await fetchWeatherData(city, unit);
+      return data;
     } catch (error) {
       const e = error as AxiosError;
       return rejectWithValue(e?.response?.data?.message);

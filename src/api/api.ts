@@ -1,11 +1,12 @@
 import axios, { AxiosError } from 'axios';
+import { TempUnits } from './../types/index';
 const baseUrl = process.env.REACT_APP_BASE_URL;
 const apiKey = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
 
-export const fetchWeatherData = async (city: string) => {
+export const fetchWeatherData = async (city: string, unit: TempUnits) => {
   try {
     const { data } = await axios.get(`
-    ${baseUrl}?q=${city}&appid=${apiKey}
+    ${baseUrl}?q=${city}&appid=${apiKey}&units=${unit}
     `);
     return data;
   } catch (error) {
