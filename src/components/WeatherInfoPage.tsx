@@ -8,7 +8,6 @@ import { setTemperatureUnit } from '../features/weather';
 import { fetchWeatherInfo } from '../redux/actions/fetchWeatherInfo';
 import { RootState } from '../redux/store';
 import { TempUnits } from '../types';
-import LoadingScreen from './LoadingScreen';
 import WeatherCarousel from './WeatherCarousel';
 
 const WeatherInfoPage: React.FC = () => {
@@ -40,9 +39,6 @@ const WeatherInfoPage: React.FC = () => {
   const { city } = data;
   return (
     <>
-      {loading === 'pending' ? (
-        <LoadingScreen />
-      ) : (
         <Flex
           flexDirection="column"
           height="100vh"
@@ -86,7 +82,6 @@ const WeatherInfoPage: React.FC = () => {
             </Flex>
           </Flex>
         </Flex>
-      )}
     </>
   );
 };

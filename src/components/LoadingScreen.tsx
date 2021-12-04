@@ -10,7 +10,7 @@ const LoadingScreen: React.FC = () => {
     <Grid
       position="relative"
       top="0"
-      bottom="0"
+      // bottom="0"
       zIndex="20"
       width="100%"
       height="100vh"

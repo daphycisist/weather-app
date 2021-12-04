@@ -10,7 +10,7 @@ import WeatherCard from './WeatherCard';
 
 const WeatherCarousel: React.FC<ChakraProps> = () => {
   const { data } = useSelector((state: RootState) => state.weather);
-  const { list } = data;
+  const  list = data?.list ??  [];
 
   const groupedData = GroupDataByDate(list);
   const weatherDates = Object.keys(groupedData);
@@ -21,10 +21,10 @@ const WeatherCarousel: React.FC<ChakraProps> = () => {
     let data = {} as IWeatherAverage;
     const sum = groupedData[item].reduce(
       (acc, curr, dataArr) => {
-        acc.icon = curr.weather[0].icon;
-        acc.temp += Math.round(curr.main.temp / dataLength);
-        acc.humidity += Math.round(curr.main.humidity / dataLength);
-        acc.windSpeed += Math.round(curr.wind.speed / dataLength);
+        acc.icon = curr?.weather[0].icon;
+        acc.temp += Math.round(curr?.main.temp / dataLength);
+        acc.humidity += Math.round(curr?.main.humidity / dataLength);
+        acc.windSpeed += Math.round(curr?.wind.speed / dataLength);
         return acc;
       },
       { temp: 0, humidity: 0, icon: '', windSpeed: 0 }
