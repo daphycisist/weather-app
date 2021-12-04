@@ -1,5 +1,5 @@
 import { Button } from '@chakra-ui/button';
-import { Box, Heading, Stack } from '@chakra-ui/layout';
+import { Box, Flex, Heading, Stack, Text } from '@chakra-ui/layout';
 import { Radio, RadioGroup } from '@chakra-ui/react';
 import React, { memo, useEffect, useState } from 'react';
 import { useErrorHandler } from 'react-error-boundary';
@@ -23,7 +23,7 @@ const WeatherInfoPage: React.FC = () => {
   const handleError = useErrorHandler();
 
   useEffect(() => {
-    dispatch(fetchWeatherInfo({ city: 'Lagos', unit: tempUnit }));
+    dispatch(fetchWeatherInfo({ city: 'Lagohs', unit: tempUnit }));
     setRefreshing(false);
     handleTempUnit(tempUnit);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -36,7 +36,6 @@ const WeatherInfoPage: React.FC = () => {
 
   if (error) handleError(error);
   const refreshPage = () => setRefreshing((prev) => !prev);
-  console.log(unit);
 
   const { city } = data;
   return (
@@ -44,7 +43,13 @@ const WeatherInfoPage: React.FC = () => {
       {loading === 'pending' ? (
         <LoadingScreen />
       ) : (
-        <Box height="100vh" backgroundColor="#060D26" p={['2rem']}>
+        <Flex
+          flexDirection="column"
+          height="100vh"
+          mx="auto"
+          p={['2rem', '4rem']}
+          maxWidth="70rem"
+        >
           <Box py="3rem">
             <Button onClick={refreshPage}>Refresh</Button>
           </Box>
@@ -54,27 +59,33 @@ const WeatherInfoPage: React.FC = () => {
             color="white"
           >
             <Stack direction="row" justifyContent="space-between">
-              <Radio colorScheme="white" value={Celsius} fontSize="sm">
-                Celsius
+              <Radio colorScheme="white" value={Celsius}>
+                <Text fontSize={['sm', 'xl']}>Celsius</Text>
               </Radio>
               <Radio colorScheme="white" value={Fahrenheit}>
-                Fahrenheit
+                <Text fontSize={['sm', 'xl']}>Fahrenheit</Text>
               </Radio>
             </Stack>
           </RadioGroup>
-          <Heading
-            as="h2"
-            size="lg"
-            color="white"
-            fontWeight="700"
-            fontSize="30px"
-            textAlign="center"
-            my="2rem"
-          >
-            {`${city?.name}, ${city?.country}`}
-          </Heading>
-          <WeatherCarousel />
-        </Box>
+          <Flex flexDirection="column" flex="1">
+            <Heading
+              as="h2"
+              size="lg"
+              color="white"
+              fontWeight="700"
+              fontSize={["30px", "40px"]}
+              my="2rem"
+              flex="1"
+              display="grid"
+              placeContent="center"
+            >
+              {`${city?.name}, ${city?.country}`}
+            </Heading>
+            <Flex flex="1" alignItems="center" minHeight="70%">
+              <WeatherCarousel />
+            </Flex>
+          </Flex>
+        </Flex>
       )}
     </>
   );

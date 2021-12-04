@@ -11,13 +11,14 @@ import { RootState } from './redux/store';
 function App() {
   const dispatch = useDispatch();
   const { unit } = useSelector(({ weather }: RootState) => weather);
+  console.log(typeof unit);
 
   const resetErrorBoundary = () => {
     dispatch(fetchWeatherInfo({ city: 'Lagos', unit }));
   };
 
   return (
-    <Box className="App" padding="0">
+    <Box className="App" padding="0" background="#266DD3">
       <ErrorBoundary
         onReset={() => {
           resetErrorBoundary();

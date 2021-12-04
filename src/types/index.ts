@@ -80,3 +80,11 @@ export interface IWeather {
   error: string;
   unit: TempUnits;
 }
+
+export interface IWeatherAverage {
+  date: string;
+  icon: string;
+  temp: number;
+  humidity: number;
+  windSpeed: number;
+}

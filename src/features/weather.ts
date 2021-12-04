@@ -26,7 +26,6 @@ export const weatherSlice = createSlice({
     builder.addCase(
       fetchWeatherInfo.fulfilled,
       (state, action: PayloadAction<IWeatherData>) => {
-        console.log('Payload', action.payload);
         state.loading = 'succeeded';
         state.data = action?.payload;
       }
