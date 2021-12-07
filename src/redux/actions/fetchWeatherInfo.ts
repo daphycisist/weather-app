@@ -6,11 +6,11 @@ import { IQueryPayload } from './../../types/index';
 export const fetchWeatherInfo = createAsyncThunk(
   'fetchWeatherData',
   async (
-    { city, unit }: IQueryPayload,
+    {  unit, coordinates }: IQueryPayload,
     { rejectWithValue }
   ) => {
     try {
-      const data = await fetchWeatherData(city, unit);
+      const data = await fetchWeatherData( unit, coordinates);
       return data;
     } catch (error) {
       const e = error as AxiosError;

@@ -62,11 +62,14 @@ export interface singleWeatherData {
   };
 }
 
-
+export interface ILocation {
+  lat: number,
+  lon: number,
+}
 
 export interface IQueryPayload {
-  city: string;
   unit: TempUnits;
+  coordinates: ILocation
 }
 
 export interface IWeatherData {
@@ -79,6 +82,7 @@ export interface IWeather {
   loading: 'idle' | 'pending' | 'succeeded' | 'failed';
   error: string;
   unit: TempUnits;
+  location: ILocation
 }
 
 export interface IWeatherAverage {
@@ -87,4 +91,6 @@ export interface IWeatherAverage {
   temp: number;
   humidity: number;
   windSpeed: number;
+  description: string;
+  report: singleWeatherData[];
 }
