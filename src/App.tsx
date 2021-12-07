@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/layout';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { useDispatch, useSelector } from 'react-redux';
 // import './App.css';

@@ -1,8 +1,6 @@
 import { Grid } from '@chakra-ui/layout';
 import { Spinner } from '@chakra-ui/react';
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
 
 const LoadingScreen: React.FC = () => {
   return (

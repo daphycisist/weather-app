@@ -1,6 +1,6 @@
 import { Button } from '@chakra-ui/button';
 import { Box, Flex, Heading, Stack, Text } from '@chakra-ui/layout';
-import { Radio, RadioGroup, useToast } from '@chakra-ui/react';
+import { Radio, RadioGroup } from '@chakra-ui/react';
 import moment from 'moment';
 import React, { memo, useEffect, useState } from 'react';
 import { useErrorHandler } from 'react-error-boundary';
@@ -12,7 +12,6 @@ import { RootState } from '../redux/store';
 import { TempUnits } from '../types';
 
 const WeatherInfoPage: React.FC = () => {
-  const toast = useToast();
   const dispatch = useDispatch();
   const { Celsius, Fahrenheit } = TempUnits;
   const { error, data, location } = useSelector(
@@ -35,6 +34,7 @@ const WeatherInfoPage: React.FC = () => {
         );
       });
     } 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   
@@ -52,6 +52,7 @@ const WeatherInfoPage: React.FC = () => {
       setRefreshing(false);
       handleTempUnit(tempUnit);
     } 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location, tempUnit, refreshing]);
 
   const handleTempUnit = (value: TempUnits) => {
