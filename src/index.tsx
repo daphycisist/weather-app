@@ -1,9 +1,9 @@
 // import {store}
 import { ChakraProvider } from '@chakra-ui/react';
-import '@fontsource/raleway/500.css';
-import '@fontsource/raleway/700.css';
 // import '@fontsource/raleway/400.css';
 import '@fontsource/poppins/400.css';
+import '@fontsource/raleway/500.css';
+import '@fontsource/raleway/700.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';

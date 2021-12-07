@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { singleWeatherData } from '../types';
+import { ILocation, singleWeatherData } from '../types';
 
 export const GroupDataByDate = (list: singleWeatherData[]) => {
   return list.reduce(
@@ -14,4 +14,19 @@ export const GroupDataByDate = (list: singleWeatherData[]) => {
 
 export const formatDate = (date: string) => {
   return moment(date).format('MMMM DD, YYYY');
+};
+
+export const convertMetersPerSecToMPH = (mps: number): number => {
+  const mph = +(2.23694 * mps).toFixed(2);
+  return mph;
+};
+
+export const getUsersLocation = async () => {
+  let locationObj = {} as ILocation;
+  navigator.geolocation.getCurrentPosition((position) => {
+    locationObj.lat = position.coords.latitude;
+    locationObj.lon = position.coords.longitude;
+    return locationObj;
+  });
+  return locationObj;
 };

@@ -1,0 +1,1502 @@
+export const mockResponse = {
+  cod: '200',
+  message: 0,
+  cnt: 40,
+  list: [
+    {
+      dt: 1638900000,
+      main: {
+        temp: 31.37,
+        feels_like: 38.37,
+        temp_min: 27.85,
+        temp_max: 31.37,
+        pressure: 1008,
+        sea_level: 1008,
+        grnd_level: 1008,
+        humidity: 73,
+        temp_kf: 3.52,
+      },
+      weather: [
+        {
+          id: 804,
+          main: 'Clouds',
+          description: 'overcast clouds',
+          icon: '04n',
+        },
+      ],
+      clouds: {
+        all: 98,
+      },
+      wind: {
+        speed: 3.96,
+        deg: 203,
+        gust: 5.67,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-07 18:00:00',
+    },
+    {
+      dt: 1638910800,
+      main: {
+        temp: 29.46,
+        feels_like: 35.33,
+        temp_min: 27.62,
+        temp_max: 29.46,
+        pressure: 1010,
+        sea_level: 1010,
+        grnd_level: 1010,
+        humidity: 77,
+        temp_kf: 1.84,
+      },
+      weather: [
+        {
+          id: 803,
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04n',
+        },
+      ],
+      clouds: {
+        all: 72,
+      },
+      wind: {
+        speed: 3.68,
+        deg: 223,
+        gust: 5.51,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-07 21:00:00',
+    },
+    {
+      dt: 1638921600,
+      main: {
+        temp: 27.14,
+        feels_like: 30.26,
+        temp_min: 27.14,
+        temp_max: 27.14,
+        pressure: 1010,
+        sea_level: 1010,
+        grnd_level: 1009,
+        humidity: 82,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 802,
+          main: 'Clouds',
+          description: 'scattered clouds',
+          icon: '03n',
+        },
+      ],
+      clouds: {
+        all: 37,
+      },
+      wind: {
+        speed: 2.86,
+        deg: 230,
+        gust: 3.28,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-08 00:00:00',
+    },
+    {
+      dt: 1638932400,
+      main: {
+        temp: 26.79,
+        feels_like: 29.61,
+        temp_min: 26.79,
+        temp_max: 26.79,
+        pressure: 1009,
+        sea_level: 1009,
+        grnd_level: 1008,
+        humidity: 84,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 800,
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01n',
+        },
+      ],
+      clouds: {
+        all: 9,
+      },
+      wind: {
+        speed: 2.51,
+        deg: 242,
+        gust: 2.83,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-08 03:00:00',
+    },
+    {
+      dt: 1638943200,
+      main: {
+        temp: 26.49,
+        feels_like: 26.49,
+        temp_min: 26.49,
+        temp_max: 26.49,
+        pressure: 1010,
+        sea_level: 1010,
+        grnd_level: 1010,
+        humidity: 84,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 500,
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d',
+        },
+      ],
+      clouds: {
+        all: 14,
+      },
+      wind: {
+        speed: 2.31,
+        deg: 240,
+        gust: 2.82,
+      },
+      visibility: 10000,
+      pop: 0.3,
+      rain: {
+        '3h': 0.37,
+      },
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-08 06:00:00',
+    },
+    {
+      dt: 1638954000,
+      main: {
+        temp: 29.85,
+        feels_like: 33.99,
+        temp_min: 29.85,
+        temp_max: 29.85,
+        pressure: 1012,
+        sea_level: 1012,
+        grnd_level: 1011,
+        humidity: 67,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 500,
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d',
+        },
+      ],
+      clouds: {
+        all: 32,
+      },
+      wind: {
+        speed: 2.29,
+        deg: 257,
+        gust: 2.17,
+      },
+      visibility: 10000,
+      pop: 0.8,
+      rain: {
+        '3h': 1.36,
+      },
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-08 09:00:00',
+    },
+    {
+      dt: 1638964800,
+      main: {
+        temp: 31.63,
+        feels_like: 35.95,
+        temp_min: 31.63,
+        temp_max: 31.63,
+        pressure: 1010,
+        sea_level: 1010,
+        grnd_level: 1009,
+        humidity: 59,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 802,
+          main: 'Clouds',
+          description: 'scattered clouds',
+          icon: '03d',
+        },
+      ],
+      clouds: {
+        all: 45,
+      },
+      wind: {
+        speed: 3.88,
+        deg: 211,
+        gust: 3.81,
+      },
+      visibility: 10000,
+      pop: 0.78,
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-08 12:00:00',
+    },
+    {
+      dt: 1638975600,
+      main: {
+        temp: 29.98,
+        feels_like: 34.29,
+        temp_min: 29.98,
+        temp_max: 29.98,
+        pressure: 1008,
+        sea_level: 1008,
+        grnd_level: 1007,
+        humidity: 67,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 801,
+          main: 'Clouds',
+          description: 'few clouds',
+          icon: '02d',
+        },
+      ],
+      clouds: {
+        all: 14,
+      },
+      wind: {
+        speed: 5.24,
+        deg: 201,
+        gust: 4.91,
+      },
+      visibility: 10000,
+      pop: 0.01,
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-08 15:00:00',
+    },
+    {
+      dt: 1638986400,
+      main: {
+        temp: 28.12,
+        feels_like: 32.24,
+        temp_min: 28.12,
+        temp_max: 28.12,
+        pressure: 1009,
+        sea_level: 1009,
+        grnd_level: 1008,
+        humidity: 79,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 801,
+          main: 'Clouds',
+          description: 'few clouds',
+          icon: '02n',
+        },
+      ],
+      clouds: {
+        all: 11,
+      },
+      wind: {
+        speed: 4.76,
+        deg: 209,
+        gust: 6.97,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-08 18:00:00',
+    },
+    {
+      dt: 1638997200,
+      main: {
+        temp: 27.76,
+        feels_like: 31.65,
+        temp_min: 27.76,
+        temp_max: 27.76,
+        pressure: 1011,
+        sea_level: 1011,
+        grnd_level: 1010,
+        humidity: 81,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 800,
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01n',
+        },
+      ],
+      clouds: {
+        all: 4,
+      },
+      wind: {
+        speed: 3.74,
+        deg: 210,
+        gust: 5.23,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-08 21:00:00',
+    },
+    {
+      dt: 1639008000,
+      main: {
+        temp: 27.45,
+        feels_like: 31.01,
+        temp_min: 27.45,
+        temp_max: 27.45,
+        pressure: 1010,
+        sea_level: 1010,
+        grnd_level: 1009,
+        humidity: 82,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 800,
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01n',
+        },
+      ],
+      clouds: {
+        all: 2,
+      },
+      wind: {
+        speed: 3.39,
+        deg: 204,
+        gust: 4.97,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-09 00:00:00',
+    },
+    {
+      dt: 1639018800,
+      main: {
+        temp: 26.95,
+        feels_like: 29.81,
+        temp_min: 26.95,
+        temp_max: 26.95,
+        pressure: 1009,
+        sea_level: 1009,
+        grnd_level: 1008,
+        humidity: 82,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 800,
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01n',
+        },
+      ],
+      clouds: {
+        all: 1,
+      },
+      wind: {
+        speed: 2.16,
+        deg: 249,
+        gust: 2.27,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-09 03:00:00',
+    },
+    {
+      dt: 1639029600,
+      main: {
+        temp: 26.78,
+        feels_like: 29.42,
+        temp_min: 26.78,
+        temp_max: 26.78,
+        pressure: 1010,
+        sea_level: 1010,
+        grnd_level: 1009,
+        humidity: 82,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 800,
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01d',
+        },
+      ],
+      clouds: {
+        all: 0,
+      },
+      wind: {
+        speed: 1.43,
+        deg: 248,
+        gust: 1.52,
+      },
+      visibility: 10000,
+      pop: 0.05,
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-09 06:00:00',
+    },
+    {
+      dt: 1639040400,
+      main: {
+        temp: 30.21,
+        feels_like: 34.57,
+        temp_min: 30.21,
+        temp_max: 30.21,
+        pressure: 1011,
+        sea_level: 1011,
+        grnd_level: 1010,
+        humidity: 66,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 500,
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d',
+        },
+      ],
+      clouds: {
+        all: 14,
+      },
+      wind: {
+        speed: 1.29,
+        deg: 261,
+        gust: 1.15,
+      },
+      visibility: 10000,
+      pop: 0.24,
+      rain: {
+        '3h': 0.13,
+      },
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-09 09:00:00',
+    },
+    {
+      dt: 1639051200,
+      main: {
+        temp: 31.28,
+        feels_like: 35.99,
+        temp_min: 31.28,
+        temp_max: 31.28,
+        pressure: 1009,
+        sea_level: 1009,
+        grnd_level: 1008,
+        humidity: 62,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 801,
+          main: 'Clouds',
+          description: 'few clouds',
+          icon: '02d',
+        },
+      ],
+      clouds: {
+        all: 11,
+      },
+      wind: {
+        speed: 3.99,
+        deg: 199,
+        gust: 3.49,
+      },
+      visibility: 10000,
+      pop: 0.04,
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-09 12:00:00',
+    },
+    {
+      dt: 1639062000,
+      main: {
+        temp: 29.52,
+        feels_like: 33.9,
+        temp_min: 29.52,
+        temp_max: 29.52,
+        pressure: 1007,
+        sea_level: 1007,
+        grnd_level: 1006,
+        humidity: 70,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 500,
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d',
+        },
+      ],
+      clouds: {
+        all: 3,
+      },
+      wind: {
+        speed: 5.11,
+        deg: 186,
+        gust: 5.17,
+      },
+      visibility: 10000,
+      pop: 0.2,
+      rain: {
+        '3h': 0.15,
+      },
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-09 15:00:00',
+    },
+    {
+      dt: 1639072800,
+      main: {
+        temp: 28.02,
+        feels_like: 31.99,
+        temp_min: 28.02,
+        temp_max: 28.02,
+        pressure: 1007,
+        sea_level: 1007,
+        grnd_level: 1006,
+        humidity: 79,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 800,
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01n',
+        },
+      ],
+      clouds: {
+        all: 2,
+      },
+      wind: {
+        speed: 4.5,
+        deg: 214,
+        gust: 6.31,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-09 18:00:00',
+    },
+    {
+      dt: 1639083600,
+      main: {
+        temp: 27.72,
+        feels_like: 31.41,
+        temp_min: 27.72,
+        temp_max: 27.72,
+        pressure: 1009,
+        sea_level: 1009,
+        grnd_level: 1008,
+        humidity: 80,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 800,
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01n',
+        },
+      ],
+      clouds: {
+        all: 0,
+      },
+      wind: {
+        speed: 3.62,
+        deg: 214,
+        gust: 5.16,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-09 21:00:00',
+    },
+    {
+      dt: 1639094400,
+      main: {
+        temp: 27.3,
+        feels_like: 30.64,
+        temp_min: 27.3,
+        temp_max: 27.3,
+        pressure: 1008,
+        sea_level: 1008,
+        grnd_level: 1007,
+        humidity: 82,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 800,
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01n',
+        },
+      ],
+      clouds: {
+        all: 0,
+      },
+      wind: {
+        speed: 2.69,
+        deg: 206,
+        gust: 2.67,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-10 00:00:00',
+    },
+    {
+      dt: 1639105200,
+      main: {
+        temp: 26.95,
+        feels_like: 29.81,
+        temp_min: 26.95,
+        temp_max: 26.95,
+        pressure: 1007,
+        sea_level: 1007,
+        grnd_level: 1006,
+        humidity: 82,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 800,
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01n',
+        },
+      ],
+      clouds: {
+        all: 3,
+      },
+      wind: {
+        speed: 2.37,
+        deg: 216,
+        gust: 2.34,
+      },
+      visibility: 10000,
+      pop: 0.05,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-10 03:00:00',
+    },
+    {
+      dt: 1639116000,
+      main: {
+        temp: 26.72,
+        feels_like: 29.37,
+        temp_min: 26.72,
+        temp_max: 26.72,
+        pressure: 1009,
+        sea_level: 1009,
+        grnd_level: 1008,
+        humidity: 83,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 800,
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01d',
+        },
+      ],
+      clouds: {
+        all: 5,
+      },
+      wind: {
+        speed: 1.58,
+        deg: 216,
+        gust: 1.64,
+      },
+      visibility: 10000,
+      pop: 0.12,
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-10 06:00:00',
+    },
+    {
+      dt: 1639126800,
+      main: {
+        temp: 29.98,
+        feels_like: 34.52,
+        temp_min: 29.98,
+        temp_max: 29.98,
+        pressure: 1010,
+        sea_level: 1010,
+        grnd_level: 1009,
+        humidity: 68,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 500,
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d',
+        },
+      ],
+      clouds: {
+        all: 31,
+      },
+      wind: {
+        speed: 1.46,
+        deg: 216,
+        gust: 1.16,
+      },
+      visibility: 10000,
+      pop: 0.32,
+      rain: {
+        '3h': 0.13,
+      },
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-10 09:00:00',
+    },
+    {
+      dt: 1639137600,
+      main: {
+        temp: 30.3,
+        feels_like: 34.78,
+        temp_min: 30.3,
+        temp_max: 30.3,
+        pressure: 1008,
+        sea_level: 1008,
+        grnd_level: 1007,
+        humidity: 66,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 500,
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d',
+        },
+      ],
+      clouds: {
+        all: 34,
+      },
+      wind: {
+        speed: 4.72,
+        deg: 200,
+        gust: 3.27,
+      },
+      visibility: 10000,
+      pop: 0.31,
+      rain: {
+        '3h': 0.26,
+      },
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-10 12:00:00',
+    },
+    {
+      dt: 1639148400,
+      main: {
+        temp: 30.13,
+        feels_like: 34.63,
+        temp_min: 30.13,
+        temp_max: 30.13,
+        pressure: 1006,
+        sea_level: 1006,
+        grnd_level: 1005,
+        humidity: 67,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 500,
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d',
+        },
+      ],
+      clouds: {
+        all: 28,
+      },
+      wind: {
+        speed: 4.73,
+        deg: 189,
+        gust: 4.67,
+      },
+      visibility: 10000,
+      pop: 0.24,
+      rain: {
+        '3h': 0.36,
+      },
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-10 15:00:00',
+    },
+    {
+      dt: 1639159200,
+      main: {
+        temp: 27.9,
+        feels_like: 31.7,
+        temp_min: 27.9,
+        temp_max: 27.9,
+        pressure: 1006,
+        sea_level: 1006,
+        grnd_level: 1005,
+        humidity: 79,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 802,
+          main: 'Clouds',
+          description: 'scattered clouds',
+          icon: '03n',
+        },
+      ],
+      clouds: {
+        all: 48,
+      },
+      wind: {
+        speed: 4.59,
+        deg: 211,
+        gust: 6.45,
+      },
+      visibility: 10000,
+      pop: 0.05,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-10 18:00:00',
+    },
+    {
+      dt: 1639170000,
+      main: {
+        temp: 27.76,
+        feels_like: 31.51,
+        temp_min: 27.76,
+        temp_max: 27.76,
+        pressure: 1008,
+        sea_level: 1008,
+        grnd_level: 1007,
+        humidity: 80,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 800,
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01n',
+        },
+      ],
+      clouds: {
+        all: 10,
+      },
+      wind: {
+        speed: 4.22,
+        deg: 223,
+        gust: 6.1,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-10 21:00:00',
+    },
+    {
+      dt: 1639180800,
+      main: {
+        temp: 27.54,
+        feels_like: 31.11,
+        temp_min: 27.54,
+        temp_max: 27.54,
+        pressure: 1008,
+        sea_level: 1008,
+        grnd_level: 1007,
+        humidity: 81,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 800,
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01n',
+        },
+      ],
+      clouds: {
+        all: 10,
+      },
+      wind: {
+        speed: 4.24,
+        deg: 218,
+        gust: 6.23,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-11 00:00:00',
+    },
+    {
+      dt: 1639191600,
+      main: {
+        temp: 27.02,
+        feels_like: 30.08,
+        temp_min: 27.02,
+        temp_max: 27.02,
+        pressure: 1007,
+        sea_level: 1007,
+        grnd_level: 1006,
+        humidity: 83,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 802,
+          main: 'Clouds',
+          description: 'scattered clouds',
+          icon: '03n',
+        },
+      ],
+      clouds: {
+        all: 35,
+      },
+      wind: {
+        speed: 2.96,
+        deg: 226,
+        gust: 3.41,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-11 03:00:00',
+    },
+    {
+      dt: 1639202400,
+      main: {
+        temp: 26.96,
+        feels_like: 30.03,
+        temp_min: 26.96,
+        temp_max: 26.96,
+        pressure: 1008,
+        sea_level: 1008,
+        grnd_level: 1007,
+        humidity: 84,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 802,
+          main: 'Clouds',
+          description: 'scattered clouds',
+          icon: '03d',
+        },
+      ],
+      clouds: {
+        all: 38,
+      },
+      wind: {
+        speed: 2.76,
+        deg: 234,
+        gust: 3.68,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-11 06:00:00',
+    },
+    {
+      dt: 1639213200,
+      main: {
+        temp: 29.52,
+        feels_like: 34.11,
+        temp_min: 29.52,
+        temp_max: 29.52,
+        pressure: 1010,
+        sea_level: 1010,
+        grnd_level: 1009,
+        humidity: 71,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 500,
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d',
+        },
+      ],
+      clouds: {
+        all: 82,
+      },
+      wind: {
+        speed: 2.31,
+        deg: 242,
+        gust: 2.19,
+      },
+      visibility: 10000,
+      pop: 0.27,
+      rain: {
+        '3h': 0.21,
+      },
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-11 09:00:00',
+    },
+    {
+      dt: 1639224000,
+      main: {
+        temp: 30.07,
+        feels_like: 34.73,
+        temp_min: 30.07,
+        temp_max: 30.07,
+        pressure: 1008,
+        sea_level: 1008,
+        grnd_level: 1007,
+        humidity: 68,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 500,
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d',
+        },
+      ],
+      clouds: {
+        all: 83,
+      },
+      wind: {
+        speed: 3.93,
+        deg: 226,
+        gust: 2.89,
+      },
+      visibility: 10000,
+      pop: 0.2,
+      rain: {
+        '3h': 0.14,
+      },
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-11 12:00:00',
+    },
+    {
+      dt: 1639234800,
+      main: {
+        temp: 29.98,
+        feels_like: 34.52,
+        temp_min: 29.98,
+        temp_max: 29.98,
+        pressure: 1005,
+        sea_level: 1005,
+        grnd_level: 1004,
+        humidity: 68,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 500,
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d',
+        },
+      ],
+      clouds: {
+        all: 35,
+      },
+      wind: {
+        speed: 5.02,
+        deg: 202,
+        gust: 4.56,
+      },
+      visibility: 10000,
+      pop: 0.36,
+      rain: {
+        '3h': 0.13,
+      },
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-11 15:00:00',
+    },
+    {
+      dt: 1639245600,
+      main: {
+        temp: 27.97,
+        feels_like: 32.02,
+        temp_min: 27.97,
+        temp_max: 27.97,
+        pressure: 1006,
+        sea_level: 1006,
+        grnd_level: 1005,
+        humidity: 80,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 803,
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04n',
+        },
+      ],
+      clouds: {
+        all: 55,
+      },
+      wind: {
+        speed: 5.07,
+        deg: 221,
+        gust: 7.17,
+      },
+      visibility: 10000,
+      pop: 0.02,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-11 18:00:00',
+    },
+    {
+      dt: 1639256400,
+      main: {
+        temp: 27.91,
+        feels_like: 32.02,
+        temp_min: 27.91,
+        temp_max: 27.91,
+        pressure: 1008,
+        sea_level: 1008,
+        grnd_level: 1008,
+        humidity: 81,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 803,
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04n',
+        },
+      ],
+      clouds: {
+        all: 70,
+      },
+      wind: {
+        speed: 4.72,
+        deg: 217,
+        gust: 6.99,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-11 21:00:00',
+    },
+    {
+      dt: 1639267200,
+      main: {
+        temp: 27.58,
+        feels_like: 31.2,
+        temp_min: 27.58,
+        temp_max: 27.58,
+        pressure: 1008,
+        sea_level: 1008,
+        grnd_level: 1007,
+        humidity: 81,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 803,
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04n',
+        },
+      ],
+      clouds: {
+        all: 67,
+      },
+      wind: {
+        speed: 4.11,
+        deg: 213,
+        gust: 6.12,
+      },
+      visibility: 10000,
+      pop: 0,
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-12 00:00:00',
+    },
+    {
+      dt: 1639278000,
+      main: {
+        temp: 26.89,
+        feels_like: 29.86,
+        temp_min: 26.89,
+        temp_max: 26.89,
+        pressure: 1007,
+        sea_level: 1007,
+        grnd_level: 1006,
+        humidity: 84,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 500,
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10n',
+        },
+      ],
+      clouds: {
+        all: 38,
+      },
+      wind: {
+        speed: 2.93,
+        deg: 255,
+        gust: 3.47,
+      },
+      visibility: 10000,
+      pop: 0.2,
+      rain: {
+        '3h': 0.13,
+      },
+      sys: {
+        pod: 'n',
+      },
+      dt_txt: '2021-12-12 03:00:00',
+    },
+    {
+      dt: 1639288800,
+      main: {
+        temp: 26.99,
+        feels_like: 30.1,
+        temp_min: 26.99,
+        temp_max: 26.99,
+        pressure: 1008,
+        sea_level: 1008,
+        grnd_level: 1007,
+        humidity: 84,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 803,
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04d',
+        },
+      ],
+      clouds: {
+        all: 51,
+      },
+      wind: {
+        speed: 2.52,
+        deg: 240,
+        gust: 2.8,
+      },
+      visibility: 10000,
+      pop: 0.02,
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-12 06:00:00',
+    },
+    {
+      dt: 1639299600,
+      main: {
+        temp: 29.64,
+        feels_like: 34.4,
+        temp_min: 29.64,
+        temp_max: 29.64,
+        pressure: 1010,
+        sea_level: 1010,
+        grnd_level: 1009,
+        humidity: 71,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 500,
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d',
+        },
+      ],
+      clouds: {
+        all: 93,
+      },
+      wind: {
+        speed: 3,
+        deg: 239,
+        gust: 2.63,
+      },
+      visibility: 10000,
+      pop: 0.26,
+      rain: {
+        '3h': 0.18,
+      },
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-12 09:00:00',
+    },
+    {
+      dt: 1639310400,
+      main: {
+        temp: 29.78,
+        feels_like: 34.51,
+        temp_min: 29.78,
+        temp_max: 29.78,
+        pressure: 1008,
+        sea_level: 1008,
+        grnd_level: 1008,
+        humidity: 70,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 500,
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d',
+        },
+      ],
+      clouds: {
+        all: 66,
+      },
+      wind: {
+        speed: 4.56,
+        deg: 209,
+        gust: 2.92,
+      },
+      visibility: 10000,
+      pop: 0.22,
+      rain: {
+        '3h': 0.11,
+      },
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-12 12:00:00',
+    },
+    {
+      dt: 1639321200,
+      main: {
+        temp: 29.97,
+        feels_like: 34.97,
+        temp_min: 29.97,
+        temp_max: 29.97,
+        pressure: 1006,
+        sea_level: 1006,
+        grnd_level: 1005,
+        humidity: 70,
+        temp_kf: 0,
+      },
+      weather: [
+        {
+          id: 500,
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d',
+        },
+      ],
+      clouds: {
+        all: 28,
+      },
+      wind: {
+        speed: 5.35,
+        deg: 202,
+        gust: 5.17,
+      },
+      visibility: 10000,
+      pop: 0.22,
+      rain: {
+        '3h': 0.38,
+      },
+      sys: {
+        pod: 'd',
+      },
+      dt_txt: '2021-12-12 15:00:00',
+    },
+  ],
+  city: {
+    id: 2332453,
+    name: 'Lagos',
+    coord: {
+      lat: 6.4676,
+      lon: 3.6534,
+    },
+    country: 'NG',
+    population: 10601345,
+    timezone: 3600,
+    sunrise: 1638855856,
+    sunset: 1638898190,
+  },
+};
