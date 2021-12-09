@@ -79,7 +79,7 @@ export interface IWeatherData {
 
 export interface IWeather {
   data: IWeatherData;
-  loading: 'idle' | 'pending' | 'succeeded' | 'failed';
+  loading: 'pending' | 'succeeded' | 'failed';
   error: string;
   unit: TempUnits;
   location: ILocation

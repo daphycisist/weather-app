@@ -1,5 +1,5 @@
 import { Button } from '@chakra-ui/button';
-import { Box, Flex, Heading, Stack, Text } from '@chakra-ui/layout';
+import { Box, Flex, Grid, Heading, Stack, Text } from '@chakra-ui/layout';
 import { Radio, RadioGroup } from '@chakra-ui/react';
 import moment from 'moment';
 import React, { memo, useEffect, useState } from 'react';
@@ -68,15 +68,26 @@ const WeatherInfoPage: React.FC = () => {
   const { city } = data;
   return (
     <>
-      <Flex
+      {/* <Flex
         flexDir="column"
         height="100vh"
         mx="auto"
-        p={['2rem', '4rem']}
+        p={['1.5rem', '4rem']}
         maxWidth="70rem"
+        justifyContent="center"
+      > */}
+      <Grid
+        height="100vh"
+        alignItems="center"
+        p={['1.5rem', '4rem']}
+        maxWidth="70rem"
+        gridAutoRows="max-content"
+        gridTemplateRows="min-content  min-content 1fr"
       >
-        <Box py="3rem">
-          <Button data-testid="refresh" onClick={refreshPage}>Refresh</Button>
+        <Box mb="3rem">
+          <Button data-testid="refresh" onClick={refreshPage}>
+            Refresh
+          </Button>
         </Box>
         <RadioGroup
           onChange={(e: TempUnits) => handleTempUnit(e)}
@@ -92,7 +103,7 @@ const WeatherInfoPage: React.FC = () => {
             </Radio>
           </Stack>
         </RadioGroup>
-        <Flex flexDir="column" flex="1" pt={['5px', '2rem']}>
+        <Flex flexDir="column" flex="1" pt={['5px', '2rem']} h="100%">
           <Flex
             flex="1"
             textAlign="center"
@@ -109,7 +120,12 @@ const WeatherInfoPage: React.FC = () => {
             >
               {`${city?.name}, ${city?.country}`}
             </Heading>
-            <Text color="white" fontWeight="700" fontSize={['14px', '20px']} data-testid="todays-date">
+            <Text
+              color="white"
+              fontWeight="700"
+              fontSize={['14px', '20px']}
+              data-testid="todays-date"
+            >
               {moment().format('dddd, MMMM DD, YYYY')}
             </Text>
           </Flex>
@@ -117,7 +133,8 @@ const WeatherInfoPage: React.FC = () => {
             <WeatherCarousel />
           </Flex>
         </Flex>
-      </Flex>
+      </Grid>
+      {/* </Flex> */}
     </>
   );
 };
