@@ -68,21 +68,14 @@ const WeatherInfoPage: React.FC = () => {
   const { city } = data;
   return (
     <>
-      {/* <Flex
-        flexDir="column"
-        height="100vh"
-        mx="auto"
-        p={['1.5rem', '4rem']}
-        maxWidth="70rem"
-        justifyContent="center"
-      > */}
-      <Grid
+     <Grid
         height="100vh"
         alignItems="center"
         p={['1.5rem', '4rem']}
         maxWidth="70rem"
         gridAutoRows="max-content"
         gridTemplateRows="min-content  min-content 1fr"
+      mx="auto"
       >
         <Box mb="3rem">
           <Button data-testid="refresh" onClick={refreshPage}>
@@ -134,7 +127,6 @@ const WeatherInfoPage: React.FC = () => {
           </Flex>
         </Flex>
       </Grid>
-      {/* </Flex> */}
     </>
   );
 };

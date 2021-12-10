@@ -13,7 +13,12 @@ const WeatherCard: React.FC<IWeatherAverage> = ({
   date,
   report,
 }) => {
-    const { unit } = useSelector(({ weather }: RootState) => weather);
+  const { unit } = useSelector(({ weather }: RootState) => weather);
+  // const [reportData, setReportData] = useState<singleWeatherData[]>([]);
+  const handleClick = () => {
+    console.log(report);
+  };
+
   return (
     <Flex
       flexDirection="column"
@@ -26,6 +31,7 @@ const WeatherCard: React.FC<IWeatherAverage> = ({
       padding={['5px', '1rem']}
       textAlign="center"
       _hover={{ cursor: 'pointer' }}
+      onClick={handleClick}
     >
       <Text fontWeight="bold" color="#344055" fontSize={['16px', '20px']}>
         {date}

@@ -50,7 +50,7 @@ const WeatherCarousel: React.FC<ChakraProps> = () => {
       renderArrow={NavArrows}
       itemPadding={[0, 10,]}
     >
-      {aggregateArray.map((item) => (
+      {aggregateArray?.map((item) => (
         <WeatherCard {...item} key={item.date} />
       ))}
     </Carousel>
