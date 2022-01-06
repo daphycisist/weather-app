@@ -1,8 +1,8 @@
 import { Box, Flex, Heading, Stack, Text } from '@chakra-ui/layout';
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-import { IWeatherAverage, singleWeatherData } from '../../types';
+import { IWeatherAverage } from '../../types';
 
 const WeatherCard: React.FC<
   IWeatherAverage & { id?: string; onClick?: (e: any) => void }
