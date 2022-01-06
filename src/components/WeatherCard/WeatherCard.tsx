@@ -1,10 +1,12 @@
 import { Box, Flex, Heading, Stack, Text } from '@chakra-ui/layout';
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-import { IWeatherAverage } from '../../types';
+import { IWeatherAverage, singleWeatherData } from '../../types';
 
-const WeatherCard: React.FC<IWeatherAverage> = ({
+const WeatherCard: React.FC<
+  IWeatherAverage & { id?: string; onClick?: (e: any) => void }
+> = ({
   temp,
   humidity,
   icon,
@@ -12,12 +14,10 @@ const WeatherCard: React.FC<IWeatherAverage> = ({
   description,
   date,
   report,
+  id,
+  onClick,
 }) => {
   const { unit } = useSelector(({ weather }: RootState) => weather);
-  // const [reportData, setReportData] = useState<singleWeatherData[]>([]);
-  const handleClick = () => {
-    console.log(report);
-  };
 
   return (
     <Flex
@@ -31,7 +31,9 @@ const WeatherCard: React.FC<IWeatherAverage> = ({
       padding={['5px', '1rem']}
       textAlign="center"
       _hover={{ cursor: 'pointer' }}
-      onClick={handleClick}
+      onClick={onClick}
+      id={id}
+      paddingBottom={["12rem"]}
     >
       <Text fontWeight="bold" color="#344055" fontSize={['16px', '20px']}>
         {date}

@@ -68,14 +68,15 @@ const WeatherInfoPage: React.FC = () => {
   const { city } = data;
   return (
     <>
-     <Grid
-        height="100vh"
+      <Grid
+        minHeight="100vh"
         alignItems="center"
         p={['1.5rem', '4rem']}
         maxWidth="70rem"
         gridAutoRows="max-content"
-        gridTemplateRows="min-content  min-content 1fr"
-      mx="auto"
+        gridTemplateRows="min-content min-content 1fr"
+        mx="auto"
+        height="100%"
       >
         <Box mb="3rem">
           <Button data-testid="refresh" onClick={refreshPage}>
@@ -96,7 +97,13 @@ const WeatherInfoPage: React.FC = () => {
             </Radio>
           </Stack>
         </RadioGroup>
-        <Flex flexDir="column" flex="1" pt={['5px', '2rem']} h="100%">
+        <Flex
+          flexDir="column"
+          flex="1"
+          pt={['5px', '2rem']}
+          h="100%"
+          border="1px solid red"
+        >
           <Flex
             flex="1"
             textAlign="center"

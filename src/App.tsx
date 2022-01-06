@@ -20,7 +20,12 @@ function App() {
   };
 
   return (
-    <Box className="App" padding="0" background="#266DD3">
+    <Box
+      className="App"
+      padding="0"
+      background="#266DD3"
+      // paddingBottom={['4rem']}
+    >
       {loading === 'pending' && <LoadingScreen />}{' '}
       <ErrorBoundary
         onReset={() => {
