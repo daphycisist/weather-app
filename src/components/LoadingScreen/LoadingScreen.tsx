@@ -5,7 +5,7 @@ import React from 'react';
 const LoadingScreen: React.FC = () => {
   return (
     <Grid
-      position="relative"
+      position="absolute"
       top="0"
       // bottom="0"
       zIndex="20"

@@ -14,7 +14,7 @@ import {
 const CustomBarChart = ({ data }: any) => {
   console.log({ data });
   return (
-    <Box h={["20rem"]} w="100%" style={{transform: 'translateX(-1rem)'}}>
+    <Box h={["20rem"]} w="100%" mt="2rem" style={{transform: 'translateX(-1rem)'}}>
       <ResponsiveContainer width={'99%'} height={'100%'} >
       <BarChart data={data}>
         {' '}

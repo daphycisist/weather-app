@@ -102,7 +102,6 @@ const WeatherInfoPage: React.FC = () => {
           flex="1"
           pt={['5px', '2rem']}
           h="100%"
-          border="1px solid red"
         >
           <Flex
             flex="1"
