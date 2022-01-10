@@ -2,7 +2,6 @@ import { Box } from '@chakra-ui/layout';
 import React from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { useDispatch, useSelector } from 'react-redux';
-// import './App.css';
 import ErrorFallback from './components/ErrorFallback/ErrorFallback';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 import WeatherInfoPage from './pages/WeatherInfoPage';
@@ -20,12 +19,7 @@ function App() {
   };
 
   return (
-    <Box
-      className="App"
-      padding="0"
-      background="#266DD3"
-      // paddingBottom={['4rem']}
-    >
+    <Box className="App" padding="0" background="#020c1b" overflowY={'scroll'}>
       {loading === 'pending' && <LoadingScreen />}{' '}
       <ErrorBoundary
         onReset={() => {

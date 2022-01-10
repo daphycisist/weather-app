@@ -1,5 +1,5 @@
 import { Button } from '@chakra-ui/button';
-import { Box, Flex, Grid, Heading, Stack, Text } from '@chakra-ui/layout';
+import { Box, Flex, Heading, Stack, Text } from '@chakra-ui/layout';
 import { Radio, RadioGroup } from '@chakra-ui/react';
 import moment from 'moment';
 import React, { memo, useEffect, useState } from 'react';
@@ -24,7 +24,6 @@ const WeatherInfoPage: React.FC = () => {
 
   useEffect(() => {
     if ('geolocation' in navigator) {
-      
       navigator.geolocation.getCurrentPosition(function (position) {
         dispatch(
           setCoordinates({
@@ -33,16 +32,12 @@ const WeatherInfoPage: React.FC = () => {
           })
         );
       });
-    } 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  
-
   useEffect(() => {
-    
     if (JSON.stringify(location) !== JSON.stringify({})) {
-
       dispatch(
         fetchWeatherInfo({
           unit: tempUnit,
@@ -51,8 +46,8 @@ const WeatherInfoPage: React.FC = () => {
       );
       setRefreshing(false);
       handleTempUnit(tempUnit);
-    } 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location, tempUnit, refreshing]);
 
   const handleTempUnit = (value: TempUnits) => {
@@ -60,25 +55,26 @@ const WeatherInfoPage: React.FC = () => {
     dispatch(setTemperatureUnit(tempUnit));
   };
 
-  
-
   if (error) handleError(error);
   const refreshPage = () => setRefreshing((prev) => !prev);
 
   const { city } = data;
   return (
     <>
-      <Grid
+      <Flex
+        height="100%"
         minHeight="100vh"
         alignItems="center"
-        p={['1.5rem', '4rem']}
+        p={['2rem', '4rem']}
         maxWidth="70rem"
         gridAutoRows="max-content"
         gridTemplateRows="min-content min-content 1fr"
         mx="auto"
-        height="100%"
+        // height="100%"
+        width="100%"
+        flexDirection={'column'}
       >
-        <Box mb="3rem">
+        <Box mb="1.5rem" w="100%">
           <Button data-testid="refresh" onClick={refreshPage}>
             Refresh
           </Button>
@@ -87,8 +83,10 @@ const WeatherInfoPage: React.FC = () => {
           onChange={(e: TempUnits) => handleTempUnit(e)}
           value={tempUnit}
           color="white"
+          width="100%"
+          my="2rem"
         >
-          <Stack direction="row" justifyContent="space-between">
+          <Stack direction="row" justifyContent="space-between" w="100%">
             <Radio colorScheme="white" value={Celsius}>
               <Text fontSize={['sm', 'xl']}>Celsius</Text>
             </Radio>
@@ -97,18 +95,14 @@ const WeatherInfoPage: React.FC = () => {
             </Radio>
           </Stack>
         </RadioGroup>
-        <Flex
-          flexDir="column"
-          flex="1"
-          pt={['5px', '2rem']}
-          h="100%"
-        >
+        <Flex flexDir="column" flex="1" pt={['5px', '2rem']} h="100%" w="100%">
           <Flex
-            flex="1"
+            // flex="1"
             textAlign="center"
             justifyContent="center"
             flexDir="column"
             gap={['5px', '3rem']}
+            mb="2rem"
           >
             <Heading
               as="h2"
@@ -116,6 +110,7 @@ const WeatherInfoPage: React.FC = () => {
               color="white"
               fontWeight="700"
               fontSize={['28px', '40px']}
+              mb=".7rem"
             >
               {`${city?.name}, ${city?.country}`}
             </Heading>
@@ -132,7 +127,7 @@ const WeatherInfoPage: React.FC = () => {
             <WeatherCarousel />
           </Flex>
         </Flex>
-      </Grid>
+      </Flex>
     </>
   );
 };

@@ -13,7 +13,6 @@ const WeatherCard: React.FC<
   windSpeed,
   description,
   date,
-  report,
   id,
   onClick,
 }) => {
@@ -24,7 +23,7 @@ const WeatherCard: React.FC<
       flexDirection="column"
       height={['12rem', '18rem']}
       width="100%"
-      backgroundColor="#6f9ceb"
+      backgroundColor="#4cc2a7f4"
       borderRadius="10px"
       alignItems="center"
       justifyContent="space-around"
@@ -33,7 +32,7 @@ const WeatherCard: React.FC<
       _hover={{ cursor: 'pointer' }}
       onClick={onClick}
       id={id}
-      paddingBottom={["12rem"]}
+      paddingBottom={['12rem']}
     >
       <Text fontWeight="bold" color="#344055" fontSize={['16px', '20px']}>
         {date}

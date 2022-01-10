@@ -66,7 +66,13 @@ const WeatherCarousel: React.FC<ChakraProps> = () => {
 
   return (
     <>
-      <Flex width="100%" height="100%" flexDirection="column" alignItems="center" gap="2rem">
+      <Flex
+        width="100%"
+        height="100%"
+        flexDirection="column"
+        alignItems="center"
+        gap="2rem"
+      >
         {' '}
         <Carousel
           breakPoints={breakPoints}

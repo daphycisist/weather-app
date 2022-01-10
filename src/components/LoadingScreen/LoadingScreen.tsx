@@ -7,10 +7,11 @@ const LoadingScreen: React.FC = () => {
     <Grid
       position="absolute"
       top="0"
-      // bottom="0"
+      bottom="0"
       zIndex="20"
       width="100%"
-      height="100vh"
+      height="100%"
+      minHeight="100vh"
       placeContent="center"
       backgroundColor="#9921e8"
       backgroundImage="linear-gradient(315deg, #9921e8 0%, #5f72be 74%)"
